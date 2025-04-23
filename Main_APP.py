@@ -12,6 +12,7 @@ import json
 import os
 from typing import List
 from pymongo import MongoClient
+from fastapi.middleware.cors import CORSMiddleware
 
 # Configure logging
 logging.basicConfig(
@@ -49,6 +50,14 @@ def decode_value(encoded: str) -> int:
     return total
 
 app = FastAPI(title="Package Measurement API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or specify ["http://localhost"] for more security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Encryption setup
 KEY_FILE = "encryption.key"
