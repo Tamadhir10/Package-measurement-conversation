@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Package Measurement Converter</h1>
+        <div class="input-group">
+            <input type="text" id="inputString" placeholder="Enter measurement string..." autocomplete="off">
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div class="actions">
+            <button id="historyBtn" style="background:#38a169;">Show History</button>
+            <button id="clearBtn" style="background:#a0aec0; color:#2d3748;">Clear</button>
+        </div>
+        <div id="result" class="result-area"></div>
+        <div id="error" class="error"></div>
+    </div>
+<script src="./src/app.js"></script>
+   
+</html>
